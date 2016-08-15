@@ -12,7 +12,7 @@ public class RegisterDAO {
 	
 	Connection con = null;
 	PreparedStatement ps = null;
-	 	
+	
 	public boolean registerUser(User user) {
 		String fname = user.getFname();
 		String lname = user.getLname();

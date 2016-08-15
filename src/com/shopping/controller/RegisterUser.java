@@ -17,20 +17,21 @@ public class RegisterUser extends HttpServlet {
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
 		
 		res.setContentType("text/html");
+		
 		String firstName= req.getParameter("fname");
 		String lastName= req.getParameter("lname");
 		String email = req.getParameter("email");
 		String userName = req.getParameter("uname");
-		String password = req.getParameter("pwd");
+		String password = req.getParameter("pwd");			
 		User user = new User(firstName,lastName,email,userName,password);
-		RegisterDAO reg = new RegisterDAO();
-		boolean isRegister = reg.registerUser(user);
 		
+		RegisterDAO reg = new RegisterDAO();
+		boolean isRegister = reg.registerUser(user);		
 		if (isRegister) {
 			res.sendRedirect("login.html");
 		} else {
 			PrintWriter pw = res.getWriter();
-			pw.println("Error. Please try again");
+			pw.println("Error. Please try again");			
 			RequestDispatcher rd = req.getRequestDispatcher("register.jsp");
 			rd.include(req,res);
 		}

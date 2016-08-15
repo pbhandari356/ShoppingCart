@@ -28,6 +28,7 @@ function equalPassword(){
 <tr><td>User Name</td><td><input type="text" name="uname" required/></td></tr>
 <tr><td>Password</td><td><input type="password" name="pwd" required/></td></tr>
 <tr><td>Confirm Password</td><td><input type="password" name="cpwd" required/></td></tr>
+
 </table>
 <center><input type="submit"/></center>
 </form>

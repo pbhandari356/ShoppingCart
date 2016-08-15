@@ -3,14 +3,8 @@ package com.shopping.bean;
 public class Item {
 
 	private String description;
-	private int item_no, price, quantity, totalPrice;
-	
-	public int getTotalPrice() {
-		return totalPrice;
-	}
-	public void setTotalPrice(int totalPrice) {
-		this.totalPrice = totalPrice;
-	}
+	private int item_no, price, quantity;
+		
 	public String getDescription() {
 		return description;
 	}

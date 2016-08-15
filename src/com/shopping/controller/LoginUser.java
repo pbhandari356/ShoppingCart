@@ -18,8 +18,7 @@ public class LoginUser extends HttpServlet{
 	public void doPost(HttpServletRequest req, HttpServletResponse res) {
 		res.setContentType("text/html");
 		String userName = req.getParameter("user");
-		String password = req.getParameter("pwd");
-		UserDAO u = new UserDAO(); 
+		String password = req.getParameter("pwd");		
 		boolean login = new UserDAO().isValidUser(userName, password);
 		
 		try {

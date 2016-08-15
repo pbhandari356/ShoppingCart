@@ -3,6 +3,7 @@ package com.shopping.bean;
 public class User {
 	
 	private String fname,lname,email,uname,pwd,cpwd;
+		
 	
 	public User(String fname, String lname, String email, String uname, String pwd) {
 		this.fname=fname;
@@ -11,7 +12,7 @@ public class User {
 		this.uname=uname;
 		this.pwd=pwd;
 	}
-
+	
 	public String getFname() {
 		return fname;
 	}
